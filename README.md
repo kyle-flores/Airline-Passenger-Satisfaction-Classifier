@@ -1,1 +1,1 @@
-# Airline-Passenger-Satisfaction-Classifier
+# Airline Passenger Satisfaction Classifier
