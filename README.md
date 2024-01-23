@@ -1,8 +1,10 @@
 # Airline Passenger Satisfaction Classifier: Project Overview
 - Produced a model that accurately predicts the satisfaction of airline passengers
-- Uncovered patterns within the data after data cleaning and creatied insightful, descriptive data visualizations
+- Uncovered patterns within the data after data cleaning and created insightful, descriptive data visualizations
 - Explored various classifiers, including Random Forest, K-Nearest Neighbors, Gradient Booster, and others, using different scoring metrics to identify the optimal model for this scenario
 - Conducted hyperparameter tuning on the best-fitting model, which was the XGBoost Classifier
+  
+This model could aid airlines in identifying dissatisfied passengers, allowing for targeted improvements to enhance their experience and overall satisfaction. Engaging with these passengers for feedback can inform strategies to elevate the airline's appeal, fostering customer loyalty, a positive brand image, and increased revenues.
 
 ## Tools Used
 **IDE:** Jupyter Notebook
@@ -29,7 +31,7 @@ DataFrame B: The most significant differences in ratings between dissatisfied an
 ![image](https://github.com/kyle-flores/Airline-Passenger-Satisfaction-Classifier/assets/153465652/c735bd1c-d0a3-44fe-ad4a-300edc8f4320)
 
 ## Data Preprocessing
-After data cleaning, the data still had some complexities that were addressed prior to modeling. Preprocessing changes included:
+After data cleaning, the data still had some complexities that were addressed before modeling. Preprocessing changes included:
 - Applied a logarithmic transformation to address right-skewed features that
 - Transformed categorical variables into dummy variables
 - Split dataset into training and test sets of 80-20 splits
@@ -62,5 +64,30 @@ Model performance was evaluated using multiple metrics, each offering unique ins
 While all metrics provide valuable information, particular emphasis was placed on the F1 score. Because of the uneven distribution of classes in the dataset, the F1 score was a robust metric for evaluating the model's effectiveness across both classes. The F1 score provides a balanced measure of precision and recall, making it well-suited for scenarios where class distributions are imbalanced.
 
 ## Model Performance
-All of the models boasted a relatively well performance. This table provides the information captured:
-![image](https://github.com/kyle-flores/Airline-Passenger-Satisfaction-Classifier/assets/153465652/97ad6df4-2679-4290-8508-caf738a6deec)
+
+All models exhibited a fine performance, as illustrated in the table below:
+
+![Model Performance Table](https://github.com/kyle-flores/Airline-Passenger-Satisfaction-Classifier/assets/153465652/1992b326-6a44-4bf4-9147-8fdb5e84564d)
+
+### Interpretation of Model Performance
+
+The table provides a comprehensive overview of the performance metrics for each classification model. Key insights include:
+
+- **Random Forest Classifier:** Boasted the highest mean performance across metrics
+- **XGBoost Classifier:** Displayed the highest F1 score and demonstrated lower sensitivity to overfitting compared to the Random Forest 
+
+## Best Performing Models
+
+While the Random Forest Classifier demonstrated the highest overall mean performance, the choice for the best-performing model was guided by specific considerations. The XGBoost Classifier, with its superior F1 score and apparent less proneness to overfitting, was selected as the optimal model for further tuning.
+
+### Insights and Implications
+
+The best-performing model achieved approximately 96% precision, recall, and F1 score. With the use of increased computational power, fine-tuning the model parameters could push these scores closer to 100%, optimizing its predictive capabilities.
+
+## Conclusion
+
+This project that developed a classifier presents a valuable tool for airlines seeking to enhance passenger satisfaction. By leveraging the insights gleaned from this model, airlines can tailor targeted strategies to address specific areas of improvement. The implementation of personalized services and proactive measures in response to identified patterns can have a profound impact on overall customer experience.
+
+This project not only provides a robust predictive model but also opens avenues for continuous improvement in airline services. As the industry evolves, the integration of such data-driven approaches can contribute to elevated customer satisfaction, brand loyalty, and sustained business growth.
+
+The success of this project highlights the potential of data science in shaping and optimizing customer-centric strategies within aviation.
